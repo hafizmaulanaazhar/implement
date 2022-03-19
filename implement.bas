@@ -1,7 +1,4 @@
-
 Sub Main
-
-End Sub
 
 Dim oDialog As Object
 Dim oLabeb As Object
@@ -11,7 +8,6 @@ Sub OpenDGL_AddMhs()
 	oDialog = LoadDialog("Standard", "AddMhs", DialogLibraries)
 	oDialog.Execute()
 End Sub
-'===============================================================
 Sub ReadNSaveDLG_AddMhs()
 	nim = oDialog.GetControl("nim")
 	nama = oDialog.GetControl("nama")
@@ -24,7 +20,6 @@ Sub ReadNSaveDLG_AddMhs()
 	nama.Text = ""
 	nilai.Text = ""
 End Sub
-'==================================================================
 Function LastRowNumber() as long
 	Dim oDoc As Object
 	Dim lastRow as Long
@@ -41,7 +36,6 @@ Function LastRowNumber() as long
 	aray = Split(find.AbsoluteName. "$")
 	LastRowNumber = aray(unbound(Aray))
 End Function
-'===================================================================
 Sub DeleteRow()
 	Dim document as object
 	Dim dispatcher as object
@@ -59,7 +53,6 @@ Sub DeleteRow()
 		dispatcher.executeDispatch(document, ".uno.ClearContens", "", 0, Array())
 	End If
 End Sub
-'=======================================================================
 Function get_range_address() as string
 
 	oActivateCell = ThisComponent.getCurrentSelection()
@@ -67,6 +60,6 @@ Function get_range_address() as string
 	oConv.Address = oActiveCell.getRangeAddress
 	get_range_address = oConv.PersistentRepresentation
 End Function
-'=======================================================================
-	
+
+End Sub
 		
